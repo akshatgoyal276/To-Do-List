@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(255, 247, 64);
+}
+.addToDo {
+  border: 3px rgba(0, 0, 0, 0.288) solid;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.288);
+}
+.addToDo:hover {
+  color: rgba(0, 0, 0, 0.712);
+  border: 3px rgba(0, 0, 0, 0.712) solid;
+  cursor: pointer;
+}
+.list {
+  margin: 5px;
+}
+.To-Do {
+  padding: 10px;
+  width: 50%;
+  margin: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.726);
+}
+.title {
+  height: 35px;
+  font-size: 30px;
+  width: 95%;
+  background-color: transparent;
+  border: none;
+  outline-style: none;
+  resize: none;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+}
+.description {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  outline-style: none;
+  resize: none;
+  height: 100px;
+  width: 95%;
+  overflow: auto;
+}
+.description::-webkit-scrollbar {
+  width: 5px;
+}
+.description::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.685);
+  border-radius: 5px;
+}
+.description:focus {
+  border: none;
+}
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+.done {
+  text-decoration: line-through;
+}
+
+.remove,
+.completed {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+}
+.remove:hover,
+.completed:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  background-color: rgb(65, 217, 255) !important;
+}
+
+.Blue {
+  background-color: rgb(122, 252, 255) !important;
+}
