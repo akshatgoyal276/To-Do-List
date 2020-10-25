@@ -8,10 +8,13 @@ export default function ToDo(props) {
 
   const [description, setDescription] = React.useState("");
   const [title, setTitle] = React.useState("");
-
+  const [del, setDel] = React.useState(props.del);
   const { id, completed, color, ondelete, oncompleted } = props;
+  const style = {
+    backgroundColor: color
+  };
   return (
-    <div className={"To-Do " + color}>
+    <div className={"To-Do " + color + (del ? " del" : "")} style={style}>
       <input
         className={"title ".concat(completed ? "done" : "")}
         placeholder="Title"
@@ -36,7 +39,10 @@ export default function ToDo(props) {
           alt="Remove"
           width="20px"
           title="Delete TO-DO"
-          onClick={() => ondelete(id)}
+          onClick={() => {
+            setDel(true);
+            ondelete(id);
+          }}
         ></img>
         <img
           className="completed"

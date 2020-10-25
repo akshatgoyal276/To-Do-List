@@ -1,5 +1,9 @@
 body {
-  background-color: rgb(255, 247, 64);
+  background-color: #fffba7;
+  min-width: 300px;
+}
+.selection_box {
+  display: flex;
 }
 .addToDo {
   border: 3px rgba(0, 0, 0, 0.288) solid;
@@ -8,6 +12,7 @@ body {
   margin: 10px;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.288);
+  min-width: 110px;
 }
 .addToDo:hover {
   color: rgba(0, 0, 0, 0.712);
@@ -16,12 +21,26 @@ body {
 }
 .list {
   margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .To-Do {
   padding: 10px;
   width: 50%;
   margin: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.726);
+  max-width: 300px;
+  min-width: 200px;
+  animation: popup;
+  animation-duration: 0.2s;
 }
 .title {
   height: 35px;
@@ -48,7 +67,7 @@ body {
   width: 5px;
 }
 .description::-webkit-scrollbar-thumb {
-  background: rgba(128, 128, 128, 0.685);
+  background: rgba(255, 255, 255, 0.575);
   border-radius: 5px;
 }
 .description:focus {
@@ -73,9 +92,17 @@ body {
   cursor: pointer;
   transform: scale(1.2);
   transition-duration: 0.5s;
-  background-color: rgb(65, 217, 255) !important;
+  background-color: rgba(255, 255, 255, 0.336) !important;
 }
-
-.Blue {
-  background-color: rgb(122, 252, 255) !important;
+@keyframes popdown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.01);
+  }
+}
+.del {
+  animation: popdown;
+  animation-duration: 0.2s;
 }
